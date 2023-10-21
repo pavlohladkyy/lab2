@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <string>
 #include <vector>
 #include <windows.h>
@@ -57,7 +57,6 @@ public:
     void playMedia(const string& filename) {
         for (const MEDIA_LIBRARY& media : media_library_) {
             if (media.getFilename() == filename) {
-                // Ваш код для відтворення медіа
                 cout << "Відтворення медіа: " << filename << endl;
                 return;
             }
