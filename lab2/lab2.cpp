@@ -7,7 +7,7 @@ using namespace std;
 
 class MEDIA_LIBRARY {
 public:
-    void set(const string& title, const string& theme, const string& actors, double rating, int length, double playback_speed, const string& filename, const string& date) {
+    MEDIA_LIBRARY(const string& title, const string& theme, const string& actors, double rating, int length, double playback_speed, const string& filename, const string& date) {
         title_ = title;
         theme_ = theme;
         actors_ = actors;
@@ -90,12 +90,9 @@ int main() {
     SetConsoleOutputCP(1251);
     PLAYER player;
 
-    MEDIA_LIBRARY media1;
-    media1.set("Гаррі Поттер", "Драма", "Деніел Редкліфф, Руперт Грінт, Емма Уотсон", 4.5, 152, 1.0, "Harry Potter.mp4", "01.01.2001");
-    MEDIA_LIBRARY media2;
-    media2.set("Один вдома", "Комедія", "Кулкін Маколей", 3.8, 123, 1.2, "movie2.mp4", "10.10.1990");
-    MEDIA_LIBRARY media3;
-    media3.set("Маска", "Комедія", "Джим Керрі", 3.8, 103, 1.2, "The Mask.mp4", "29.07.1994");
+    MEDIA_LIBRARY media1("Гаррі Поттер", "Драма", "Деніел Редкліфф, Руперт Грінт, Емма Уотсон", 4.5, 152, 1.0, "Harry Potter.mp4", "01.01.2001");
+    MEDIA_LIBRARY media2("Один вдома", "Комедія", "Кулкін Маколей", 3.8, 123, 1.2, "movie2.mp4", "10.10.1990");
+    MEDIA_LIBRARY media3("Маска", "Комедія", "Джим Керрі", 3.8, 103, 1.2, "The Mask.mp4", "29.07.1994");
 
     player.addMedia(media1);
     player.addMedia(media2);
